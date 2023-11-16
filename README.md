@@ -6,3 +6,4 @@ An  project employing "Layered Architecture" ensures organized structure, stream
 ##Our Teams
 
 - [Iksan](https://github.com/Ichsan47)
+- [Gibran](https://github.com/gibranfitrah)
