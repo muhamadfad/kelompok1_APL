@@ -7,3 +7,4 @@ An  project employing "Layered Architecture" ensures organized structure, stream
 
 - [Iksan](https://github.com/Ichsan47)
 - [Gibran](https://github.com/gibranfitrah)
+- [Anggun](https://github.com/Anggunlestariarmansyah)
