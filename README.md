@@ -9,6 +9,6 @@ An  project employing "Layered Architecture" ensures organized structure, stream
 - [Iksan](https://github.com/Ichsan47)
 - [Gibran](https://github.com/gibranfitrah)
 - [Anggun Lestari Arman Syah](https://github.com/Anggunlestariarmansyah)
-- [Elvi](https://github.com/elvisaktiawatisalemaku)
+- [Elvi Saktiawati Salemaku](https://github.com/elvisaktiawatisalemaku)
 - [Nurul](https://github.com/nnrlaziza).
 - [wilda](https://github.com/WildaAryani0)
