@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="351.0" prefWidth="350.0" style="-fx-background-color: white;" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.pharmacy.controller.ManageRatesFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="-1.0" layoutY="6.0" prefHeight="25.0" prefWidth="350.0" text="Manage Rates">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="10.0" layoutY="42.0" prefHeight="2.0" prefWidth="327.0" />
+      <Label layoutX="27.0" layoutY="90.0" prefHeight="30.0" prefWidth="196.0" text="Current Rate  : ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRate" alignment="CENTER" contentDisplay="CENTER" layoutX="223.0" layoutY="90.0" prefHeight="30.0" prefWidth="50.0" text="2" textFill="#3b8605">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtNewRate" labelFloat="true" layoutX="27.0" layoutY="176.0" onAction="#txtNewRate_OnAction" prefHeight="24.0" prefWidth="245.0" promptText="New Rate" />
+      <JFXButton id="btnAdd" fx:id="btnAddRate" buttonType="RAISED" layoutX="27.0" layoutY="225.0" onAction="#btnAddRate_OnAction" prefHeight="26.0" prefWidth="297.0" style="-fx-cursor: hand;" text="Add" />
+      <Label layoutX="282.0" layoutY="184.0" text="\%" />
+      <JFXButton id="btnViewDrug" fx:id="btnOk" buttonType="RAISED" layoutX="129.0" layoutY="294.0" onAction="#btnOk_OnAction" prefHeight="26.0" prefWidth="101.0" style="-fx-cursor: hand;" text="OK" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="272.0" layoutY="90.0" prefHeight="30.0" prefWidth="31.0" text="\%" textFill="#3b8605">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

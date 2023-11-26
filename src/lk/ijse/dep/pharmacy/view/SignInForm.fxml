@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" prefHeight="270.0" prefWidth="440.0" style="-fx-background-color: white;" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.pharmacy.controller.SignInFormController">
+   <children>
+      <JFXTextField fx:id="txtUsername" labelFloat="true" layoutX="81.0" layoutY="43.0" onAction="#userName_OnAction" prefHeight="24.0" prefWidth="290.0" promptText="Username" />
+      <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="81.0" layoutY="98.0" onAction="#password_OnAction" prefHeight="24.0" prefWidth="290.0" promptText="Password" />
+      <JFXButton id="btnLogin" buttonType="RAISED" layoutX="278.0" layoutY="150.0" onAction="#btnLoginOnAction" prefHeight="26.0" prefWidth="91.0" style="-fx-cursor: hand;" text="Login" />
+      <Label fx:id="lblForgetPassword" layoutX="81.0" layoutY="155.0" onMouseClicked="#forgetPassword_OnMouseClicked" style="-fx-cursor: hand;" text="Forget Password ?" textFill="#81b0c9" />
+      <Separator layoutX="81.0" layoutY="224.0" prefHeight="4.0" prefWidth="120.0" />
+      <Separator layoutX="238.0" layoutY="224.0" prefHeight="4.0" prefWidth="133.0" />
+      <Label layoutX="212.0" layoutY="216.0" text="OR" textFill="#8d8888" />
+   </children>
+</AnchorPane>

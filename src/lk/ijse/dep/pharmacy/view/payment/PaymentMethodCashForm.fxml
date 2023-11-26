@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="170.0" prefWidth="585.0" style="-fx-background-color: white;" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.pharmacy.controller.PaymentMethodCashFormController">
+   <children>
+      <Label alignment="CENTER_RIGHT" layoutX="146.0" layoutY="24.0" prefHeight="16.0" prefWidth="158.0" text="Cash Recevied" />
+      <Label fx:id="lblCashRecevied" alignment="CENTER_RIGHT" layoutX="313.0" layoutY="24.0" prefHeight="16.0" prefWidth="191.0" text="0" />
+      <Label alignment="CENTER_RIGHT" layoutX="146.0" layoutY="64.0" prefHeight="16.0" prefWidth="158.0" text="Cash Discount" />
+      <Label fx:id="lblDiscount" alignment="CENTER_RIGHT" layoutX="313.0" layoutY="64.0" prefHeight="16.0" prefWidth="191.0" text="0" />
+      <Label alignment="CENTER_RIGHT" layoutX="146.0" layoutY="104.0" prefHeight="16.0" prefWidth="158.0" text="Balance" textFill="#bc0a0a">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBalance" alignment="CENTER_RIGHT" layoutX="313.0" layoutY="104.0" prefHeight="16.0" prefWidth="191.0" text="0" textFill="#ae0f0f">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

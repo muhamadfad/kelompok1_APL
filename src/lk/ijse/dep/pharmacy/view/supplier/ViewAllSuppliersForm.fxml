@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="437.0" prefWidth="592.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.pharmacy.controller.ViewAllSupplierFormController">
+   <children>
+      <JFXTextField fx:id="txtSupplierSearch" labelFloat="true" layoutX="19.0" layoutY="63.0" prefHeight="24.0" prefWidth="221.0" promptText="Find :" />
+      <TableView fx:id="tblSupplierDetails" layoutX="17.0" layoutY="105.0" onMouseClicked="#tblSupplierDetails_OnMouseClicked" prefHeight="312.0" prefWidth="561.0">
+         <columns>
+            <TableColumn prefWidth="87.0" text="Reg No" />
+            <TableColumn prefWidth="123.0" text="Name" />
+            <TableColumn prefWidth="124.0" text="Address" />
+            <TableColumn prefWidth="105.0" text="Mobile" />
+            <TableColumn prefWidth="121.0" text="Email" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutY="4.0" prefHeight="36.0" prefWidth="592.0" text="View All Suppliers">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="13.0" layoutY="40.0" prefHeight="14.0" prefWidth="561.0" />
+   </children>
+</AnchorPane>

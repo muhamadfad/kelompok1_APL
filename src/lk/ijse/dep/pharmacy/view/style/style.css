@@ -1,0 +1,39 @@
+#btnSignUp{
+    -fx-background-color: #83BB26;
+    -fx-text-fill: white;
+}
+
+#btnLogin{
+    -fx-background-color: #00B9EE;
+    -fx-text-fill: white;
+}
+
+#btnAdd{
+    -fx-background-color: #83BB26;
+    -fx-text-fill: white;
+}
+#btnViewDrug{
+    -fx-background-color: #00B9EE;
+    -fx-text-fill: white;
+}
+#btnPrint{
+    -fx-background-color: #008295;
+    -fx-text-fill: white;
+}
+#btnMakePayment{
+    -fx-background-color: #003671;
+    -fx-text-fill: white;
+}
+#btnPay{
+    -fx-background-color: #003671;
+    -fx-text-fill: white;
+}
+
+#btnDelete{
+    -fx-background-color: #EE2B4D;
+    -fx-text-fill: white;
+}
+#btnClear{
+    -fx-background-color: #D9B504;
+    -fx-text-fill: white;
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="611.0" prefWidth="922.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.pharmacy.controller.ManageDrugItemFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="-1.0" layoutY="4.0" prefHeight="36.0" prefWidth="922.0" text="Manage Drugs">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtDrugCode" labelFloat="true" layoutX="28.0" layoutY="96.0" prefHeight="24.0" prefWidth="192.0" promptText="Drug Code :" />
+      <Separator layoutX="28.0" layoutY="40.0" prefHeight="14.0" prefWidth="866.0" />
+      <JFXTextField fx:id="txtDrugDes" labelFloat="true" layoutX="258.0" layoutY="96.0" prefHeight="24.0" prefWidth="192.0" promptText="Drug Description :" />
+      <JFXTextField fx:id="txtDrugQty" labelFloat="true" layoutX="478.0" layoutY="96.0" prefHeight="24.0" prefWidth="192.0" promptText="Drug Quantity :" />
+      <JFXTextField fx:id="txtDrugUnitPrice" labelFloat="true" layoutX="698.0" layoutY="96.0" prefHeight="24.0" prefWidth="192.0" promptText="Drug Unit Price :" />
+      <DatePicker fx:id="dtpM_Date" layoutX="26.0" layoutY="147.0" prefHeight="26.0" prefWidth="198.0" promptText="M Date" />
+      <DatePicker fx:id="dtpExpDate" layoutX="260.0" layoutY="147.0" prefHeight="26.0" prefWidth="198.0" promptText="Exp Date" />
+      <JFXComboBox fx:id="cmbLocationCode" labelFloat="true" layoutX="478.0" layoutY="147.0" prefHeight="26.0" prefWidth="192.0" promptText="Location Code :" />
+      <Label fx:id="lblDate" alignment="CENTER_RIGHT" layoutX="788.0" layoutY="51.0" prefHeight="16.0" prefWidth="100.0" text="Date" />
+      <Separator layoutX="93.0" layoutY="80.0" prefHeight="3.0" prefWidth="805.0" />
+      <Label layoutX="30.0" layoutY="70.0" prefHeight="14.0" prefWidth="108.0" text="Drug Info" textFill="#a4a4a4">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Separator layoutX="27.0" layoutY="210.0" prefHeight="3.0" prefWidth="431.0" />
+      <JFXButton id="btnAdd" fx:id="btnAdd" buttonType="RAISED" layoutX="488.0" layoutY="196.0" onAction="#btnAddDrug_OnAction" prefHeight="26.0" prefWidth="100.0" text="Add" />
+      <JFXButton id="btnClear" fx:id="btnClear" buttonType="RAISED" layoutX="638.0" layoutY="196.0" onAction="#btnClearDrug_OnAction" prefHeight="26.0" prefWidth="100.0" text="Clear" />
+      <JFXButton id="btnDelete" fx:id="btnDelete" buttonType="RAISED" layoutX="778.0" layoutY="196.0" onAction="#btnDeleteDrug_OnAction" prefHeight="26.0" prefWidth="100.0" text="Delete" />
+      <JFXTextField fx:id="txtDrugSearch" labelFloat="true" layoutX="27.0" layoutY="233.0" prefHeight="24.0" prefWidth="221.0" promptText="Find :" />
+      <TableView fx:id="tblDrugDetails" layoutX="27.0" layoutY="281.0" prefHeight="307.0" prefWidth="866.0">
+         <columns>
+            <TableColumn prefWidth="104.0" text="Drug Code" />
+            <TableColumn prefWidth="180.0" text="Drug Description" />
+            <TableColumn prefWidth="85.0" text="Quantity" />
+            <TableColumn prefWidth="105.0" text="Unit Price" />
+            <TableColumn prefWidth="137.0" text="M_Date" />
+            <TableColumn prefWidth="128.0" text="Expire Date" />
+            <TableColumn prefWidth="125.0" text="Location Code" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtDrugLocationDes" labelFloat="true" layoutX="698.0" layoutY="146.0" prefHeight="24.0" prefWidth="192.0" promptText="Location Description :" />
+   </children>
+</AnchorPane>

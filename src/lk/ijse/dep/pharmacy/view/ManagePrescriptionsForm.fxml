@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="667.0" prefWidth="1180.0" style="-fx-background-color: white;" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.pharmacy.controller.ManagePrescriptionFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="-1.0" layoutY="3.0" prefHeight="16.0" prefWidth="1180.0" text="Manage Prescription">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="30.0" layoutY="42.0" prefHeight="0.0" prefWidth="1126.0" />
+      <JFXTextField fx:id="txtPresRefNo" labelFloat="true" layoutX="30.0" layoutY="75.0" prefHeight="24.0" prefWidth="211.0" promptText="Ref no :" />
+      <JFXTextField fx:id="txtPresDoctorName" labelFloat="true" layoutX="260.0" layoutY="175.0" prefHeight="24.0" prefWidth="211.0" promptText="Doctor Name:" />
+      <JFXTextField fx:id="txtPresPatientName" labelFloat="true" layoutX="260.0" layoutY="285.0" prefHeight="24.0" prefWidth="211.0" promptText="Patient Name :" />
+      <JFXTextField fx:id="txtPresDrugName" labelFloat="true" layoutX="750.0" layoutY="85.0" prefHeight="24.0" prefWidth="161.0" promptText="Drug Name :" />
+      <JFXTextField fx:id="txtPresSearch" labelFloat="true" layoutX="30.0" layoutY="425.0" prefHeight="24.0" prefWidth="430.0" promptText="Find :" />
+      <JFXButton id="btnPrint" buttonType="RAISED" layoutX="485.0" layoutY="425.0" onAction="#btnPrintSearched" prefHeight="26.0" prefWidth="101.0" style="-fx-cursor: hand;" text="Print" />
+      <JFXButton id="btnMakePayment" fx:id="btnMakePayment" buttonType="RAISED" layoutX="1001.0" layoutY="566.0" onAction="#btnPresMakePayment_OnAction" prefHeight="92.0" prefWidth="153.0" style="-fx-cursor: hand;" text="Make Payment" />
+      <Label fx:id="lblDocNotReg" layoutX="486.0" layoutY="184.0" onMouseClicked="#docNotReg_OnMouseClicked" style="-fx-cursor: hand;" text="Not Registerd ?" textFill="#8ec5cd" />
+      <Label layoutX="489.0" layoutY="294.0" onMouseClicked="#patientNotReg_OnMouseClicked" style="-fx-cursor: hand;" text="Not Registerd ?" textFill="#8ec5cd" />
+      <Separator layoutX="107.0" layoutY="145.0" prefHeight="3.0" prefWidth="482.0" />
+      <Label layoutX="30.0" layoutY="137.0" prefHeight="14.0" prefWidth="79.0" text="Doctor Details" textFill="#a4a4a4">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Separator layoutX="107.0" layoutY="256.0" prefHeight="3.0" prefWidth="482.0" />
+      <Label layoutX="30.0" layoutY="248.0" prefHeight="14.0" prefWidth="79.0" text="Patient Details" textFill="#a4a4a4">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Separator layoutX="687.0" layoutY="59.0" prefHeight="16.0" prefWidth="468.0" />
+      <Label layoutX="610.0" layoutY="57.0" prefHeight="14.0" prefWidth="79.0" text="Drug Details" textFill="#a4a4a4">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCurrentDate" alignment="CENTER_RIGHT" layoutX="480.0" layoutY="59.0" prefHeight="16.0" prefWidth="101.0" text="Date" />
+      <Label fx:id="lblCurrentTime" alignment="CENTER_RIGHT" layoutX="480.0" layoutY="89.0" prefHeight="16.0" prefWidth="101.0" text="Time" />
+      <Separator layoutX="599.0" layoutY="51.0" orientation="VERTICAL" prefHeight="397.0" prefWidth="6.0" />
+      <TableView fx:id="tblPresDrugDetails" layoutX="610.0" layoutY="169.0" onMouseClicked="#tblDrugDetails_OnMouseClicked" prefHeight="255.0" prefWidth="545.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Code" />
+          <TableColumn prefWidth="79.0" text="BID" />
+            <TableColumn prefWidth="91.0" text="Description" />
+            <TableColumn prefWidth="56.0" text="QTY" />
+            <TableColumn prefWidth="88.0" text="Unit Price" />
+            <TableColumn prefWidth="73.0" text="Total" />
+            <TableColumn prefWidth="82.0" text="Action" />
+        </columns>
+      </TableView>
+      <Separator layoutX="30.0" layoutY="369.0" prefHeight="16.0" prefWidth="560.0" />
+      <TableView fx:id="tblPrescriptionDetails" layoutX="30.0" layoutY="464.0" onMouseClicked="#tblPrescriptionDetails_OnMouseClicked" prefHeight="194.0" prefWidth="881.0">
+        <columns>
+          <TableColumn prefWidth="100.99996948242188" text="Ref No" />
+          <TableColumn prefWidth="137.00003051757812" text="Patient ID" />
+            <TableColumn prefWidth="191.0" text="Patient Name" />
+            <TableColumn prefWidth="205.0" text="Doctor Name" />
+            <TableColumn prefWidth="135.0" text="Issued Date" />
+            <TableColumn prefWidth="110.0" text="Total" />
+        </columns>
+      </TableView>
+      <Label layoutX="30.0" layoutY="392.0" text="ISSUED PRESCRIPTION HISTORY" textFill="#000000b7" />
+      <Separator layoutX="610.0" layoutY="435.0" prefHeight="16.0" prefWidth="545.0" />
+      <JFXButton id="btnAdd" fx:id="btnAddPres" buttonType="RAISED" layoutX="250.0" layoutY="70.0" onAction="#btnOrderAddNewPres_OnAction" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" text="+">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbPresDocCode" labelFloat="true" layoutX="31.0" layoutY="174.0" prefHeight="26.0" prefWidth="211.0" promptText="Doctor Reg No :" />
+      <JFXComboBox fx:id="cmbPresPatientNic" labelFloat="true" layoutX="31.0" layoutY="283.0" prefHeight="26.0" prefWidth="211.0" promptText="Patient NIC :" />
+      <JFXComboBox fx:id="cmbPresDrugCode" labelFloat="true" layoutX="611.0" layoutY="83.0" prefHeight="26.0" prefWidth="124.0" promptText="Drug Code :" />
+      <JFXTextField fx:id="txtPresDrugQtyIn" labelFloat="true" layoutX="926.0" layoutY="85.0" prefHeight="24.0" prefWidth="60.0" promptText="Qty In :" />
+      <JFXTextField fx:id="txtPresDrugUnitPrice" labelFloat="true" layoutX="999.0" layoutY="85.0" prefHeight="24.0" prefWidth="60.0" promptText="Price :" />
+      <JFXTextField fx:id="txtPresDrugQty" labelFloat="true" layoutX="753.0" layoutY="126.0" onAction="#txtQty_OnAction" prefHeight="24.0" prefWidth="60.0" promptText="Qty :" />
+      <JFXButton id="btnAdd" fx:id="btnAdd" buttonType="RAISED" layoutX="827.0" layoutY="125.0" onAction="#btnPresDrugAdd_OnAction" prefHeight="26.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Add" />
+      <JFXButton id="btnViewDrug" fx:id="btnViewDrugs" buttonType="RAISED" layoutX="943.0" layoutY="124.0" onAction="#btnPresViewDrug_OnAction" prefHeight="26.0" prefWidth="101.0" style="-fx-cursor: hand;" text="View Drugs" />
+      <JFXButton id="btnClear" fx:id="btnClear" buttonType="RAISED" layoutX="932.0" layoutY="630.0" onAction="#banClearAllFields_OnAction" prefHeight="26.0" prefWidth="60.0" style="-fx-cursor: hand;" text="Clear" />
+      <Label fx:id="lblPresTotal" alignment="CENTER" layoutX="913.0" layoutY="514.0" prefHeight="30.0" prefWidth="228.0" text="0.00" textFill="#ae0707">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="913.0" layoutY="474.0" prefHeight="30.0" prefWidth="228.0" text="Total" textFill="#ae0707">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <JFXButton id="btnViewDrug" fx:id="btnViewDoctors" buttonType="RAISED" layoutX="467.0" layoutY="215.0" onAction="#btnPresViewDoctor_OnAction" prefHeight="26.0" prefWidth="124.0" style="-fx-cursor: hand;" text="View Doctors" />
+      <JFXButton id="btnViewDrug" fx:id="btnViewPatient" buttonType="RAISED" layoutX="467.0" layoutY="325.0" onAction="#btnPresViewPatient_OnAction" prefHeight="26.0" prefWidth="124.0" style="-fx-cursor: hand;" text="View Patients" />
+      <JFXButton id="btnViewDrug" fx:id="btnViewStocks" buttonType="RAISED" layoutX="1050.0" layoutY="124.0" onAction="#btnPresViewStocks_OnAction" prefHeight="26.0" prefWidth="101.0" style="-fx-cursor: hand;" text="View Stocks" />
+      <Label fx:id="lblBatch" layoutX="663.0" layoutY="136.0" prefHeight="16.0" prefWidth="71.0" />
+      <Label layoutX="614.0" layoutY="137.0" text="Batch :" />
+      <JFXButton id="btnClear" fx:id="btnRate" buttonType="RAISED" layoutX="1100.0" layoutY="83.0" onAction="#btnRateOnAction" prefHeight="26.0" prefWidth="51.0" style="-fx-cursor: hand;" text="Rate" />
+      <Label fx:id="lblRate" alignment="CENTER" contentDisplay="CENTER" layoutX="1062.0" layoutY="86.0" prefHeight="24.0" prefWidth="23.0" />
+      <Label layoutX="1084.0" layoutY="85.0" prefHeight="24.0" prefWidth="13.0" text="\%" />
+   </children>
+</AnchorPane>
