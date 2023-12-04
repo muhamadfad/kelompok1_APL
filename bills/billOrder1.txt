@@ -1,0 +1,15 @@
+Order details: 
+
+Order ID: 1
+Order Date: 2019-05-09 11:38:26
+Table: 1
+
+Products ordered: 
+
+c	1.0
+a	1.0
+ca	2.0
+
+Total payment: 
+
+4.0
