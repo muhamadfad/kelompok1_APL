@@ -4,6 +4,7 @@ An project employing "Layered Architecture" ensures organized structure, streaml
 
 E1E121001_ELVI SAKTIAWATI SALEMAKU
 E1E121096_WILDA ARYANI
+E1E121048_ANGGUN LESTARI ARMAN SYAH
 
 # Our Teams
 
