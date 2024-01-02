@@ -3,6 +3,7 @@
 An project employing "Layered Architecture" ensures organized structure, streamlining development, and enhancing system flexibility.
 
 E1E121001_ELVI SAKTIAWATI SALEMAKU
+E1E121096_WILDA ARYANI
 
 # Our Teams
 
